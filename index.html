@@ -5,37 +5,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oktika</title>
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="Style/style.css">
+    <link rel="stylesheet" href="Style/grid.css">
 
 </head>
 
 <body>
-    <header class="header">
-        <h1>Oktika</h1>
-        <div class="nav">
-            <div class="one"></div>
-            <div class="two"></div>
-            <div class="three"></div>
-            <nav class="dropdown-content">
-                <a href="index.html">Store</a>
-                <a href="comunity/library.html">Library</a>
-                <a href="comunity/inventory.html">Inventory</a>
-                <a href="comunity/game_guid.html">Game guides</a>
-                <a href="profile/profile.html">Profile</a>
-                <a href="career/career.html">Employment</a>
-            </nav>
-        </div>
 
+    <header>
+        <h1>Oktika</h1>
+
+        <div class="navbar">
+            <a href="index.html" class="active">Store</a>
+            <a href="comunity/library.html">Library</a>
+            <a href="comunity/inventory.html">Inventory</a>
+            <a href="comunity/game_guid.html">comunity</a>
+            <a href="profile/log_in.html">Log in</a>
+            <a href="career/career.html">Employment</a>
+
+            <div class="burger-menu" id="burger-menu">
+                <div class="one"></div>
+                <div class="two"></div>
+                <div class="three"></div>
+                <nav class="dropdown-content" id="dropdown-content">
+                    <a href="index.html" class="active">Store</a>
+                    <a href="comunity/library.html">Library</a>
+                    <a href="comunity/inventory.html">Inventory</a>
+                    <a href="comunity/game_guid.html">Game guides</a>
+                    <a href="profile/profile.html">Log in</a>
+                    <a href="career/career.html">Employment</a>
+                </nav>
+            </div>
+        </div>
     </header>
 
-    <div class="serch-bar">
-        
+
+
+
+    <div class="back-ground">
+        <div class="com-search">
+            <div class="search-container">
+                <input type="text" placeholder="Search.." name="search">
+                <button type="submit">Submit</button>
+            </div>
+        </div>
+    
+
     </div>
 
     <footer class="footer">
         <h2>Light studio</h2>
         <p>Copyright © 2024 All rights reserved.</p>
     </footer>
+    <script src="javascript/script.js"></script>
 </body>
 
 </html>
