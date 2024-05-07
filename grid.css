@@ -1,7 +1,7 @@
-.container {
+.container-grid {
     position: relative;
-    width: 100%;
-    max-width: 100%;
+    width: 80%;
+    max-width: 80%;
     margin: 0 auto;
     padding: 0 20px;
     box-sizing: border-box;
@@ -16,16 +16,16 @@
   
   /* For devices larger than 400px */
   @media (min-width: 400px) {
-    .container {
-      width: 85%;
+    .container-grid {
+      width: 80%;
       padding: 0;
     }
   }
   
   /* For devices larger than 550px */
   @media (min-width: 550px) {
-    .container {
-      width: 100%;
+    .container-grid {
+      width: 80%;
     }
   
     .column,

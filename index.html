@@ -5,241 +5,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oktika</title>
-    <link rel="stylesheet" href="Style/grid.css">
+    <link rel="stylesheet" href="grid.css">
+    <link rel="stylesheet" href="foothead.css">
     <style>
         * {
             margin: 0;
+            background: black;
         }
 
         body {
-            background: #333;
             margin: 0;
             box-sizing: border-box;
         }
 
-        header {
-            overflow: hidden;
-            position: absolute;
-            width: 100%;
-            height: auto;
-            color: white;
-            background-image: linear-gradient(to right, #346662, #364e5e, #304d5c);
-        }
-
-        header h1 {
-            text-align: center;
-            font-size: 24pt;
-        }
-
-        .navbar {
-            height: 100%;
-            display: column;
-        }
-
-
-        .navbar a {
-            display: none;
-        }
-
-        .burger-menu div {
-            height: 4px;
-            background-color: white;
-            margin: 5px 0;
-            border-radius: 25px;
-            transition: 0.3s;
-            float: right;
-        }
-
-        .burger-menu {
-            width: 30px;
-            display: block;
-            margin-right: 1em;
-            float: right;
-            position: relative;
-        }
-
-        .one {
-            width: 30px;
-        }
-
-        .two {
-            width: 20px;
-        }
-
-        .three {
-            width: 25px;
-        }
-
-        .burger-menu:hover div {
-            width: 30px;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            left: -130px;
-            top: 100%;
-            right: 160px;
-            background: linear-gradient(to right, #4c5c3f, #4e6668);
-            border-radius: 10px;
-            width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-            z-index: 9999;
-        }
-
-        .dropdown {
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            background: linear-gradient(to right, #314d5e, #476354, #455961);
-            display: block;
-            color: white;
-            text-align: left;
-            float: left;
-            margin: 5px;
-            width: 115px;
-        }
-
-        .burger-menu:hover,
-        .burger-menu:hover .dropdown-content {
-            display: block;
-        }
-
-
-
-
-        .burger-menu {
-            display: none;
-        }
-
-        .navbar a {
-            display: inline-block;
-            text-align: center;
-            color: white;
-            text-decoration: none;
-            border-radius: 0 10px 10px 10px;
-            border: outset;
-            border-color: #d3dd18;
-            padding: 5px;
-            margin: 5px;
-        }
-
-        .navbar a:hover {
-            background-image: linear-gradient(to right, #d3dd18, #f8d90f);
-            color: black;
-        }
-
-        .navbar .active {
-            background: linear-gradient(to right top, #e6dada, #274046);
-            font-weight: 600;
-            color: black;
-        }
-
-
-        .con-search {
-
-            position: absolute;
-            top: 150px;
-            right: 20px;
-            z-index: 1;
-            background: rgba(255, 255, 255, 0.8);
-            padding-left: 80px;
-            border-radius: 5px;
-        }
-
-        .search-container input[type=text] {
-            padding: 6px;
-            font-size: 17px;
-            border: none;
-        }
-
-        .search-container button {
-            padding: 6px;
-            background: #ddd;
-            font-size: 17px;
-            border: none;
-            cursor: pointer;
-        }
-
-        .search-container button:hover {
-            background: #ccc;
-        }
-
-        .footer {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            margin: 0;
-            border-radius: 0px 0px 10px 10px;
-            height: 80px;
-            width: 100%;
-            background: linear-gradient(to right, #346662, #364e5e, #304d5c);
-            color: white;
-        }
-
-        .footer h2 {
-            text-align: center;
-            margin: 10px;
-            padding: 5px;
-        }
-
-        .footer p {
-            text-align: left;
-            font-size: 8pt;
-            margin: 10px;
-            color: grey;
-        }
+       
     </style>
 </head>
 
 <body>
-    <header>
+    <div class="container-grid">
+        <header>
 
-    </header>
-    
-    <main>
-    
-    </main>
-    
-    <footer>
-    
-    </footer>
-    
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const header = document.querySelector("header");
-            const footer = document.querySelector("footer");
-    
-            header.innerHTML = `
-                <h1>Oktika</h1>
-                <div class="navbar">
-                    <a href="index.html" class="active">Store</a>
-                    <a href="comunity/library.html">Library</a>
-                    <a href="comunity/inventory.html">Inventory</a>
-                    <a href="comunity/game_guid.html">Community</a>
-                    <a href="profile/profile.html">Profile</a>
-                    <a href="career/career.html">Employment</a>
-                    <div class="burger-menu">
-                        <div class="one"></div>
-                        <div class="two"></div>
-                        <div class="three"></div>
-                        <div class="dropdown-content">
-                            <a href="index.html" class="active">Store</a>
-                            <a href="comunity/library.html">Library</a>
-                            <a href="comunity/inventory.html">Inventory</a>
-                            <a href="comunity/game_guid.html">Game guides</a>
-                            <a href="profile/profile.html">Profile</a>
-                            <a href="career/career.html">Employment</a>
-                        </div>
-                    </div>
-                </div>
-            `;
-    
-            footer.innerHTML = ` 
-                <h2>Light studio</h2>
-                <p>Copyright © 2024 All rights reserved.</p>
-            `;
-        });
-    </script>
+        </header>
+
+        <main>
+            <div class="filters">
+
+            </div>
+        </main>
+
+        <footer>
+
+        </footer>
+
+        <script src="script.js"></script>
+    </div>
 </body>
+
 </html>
