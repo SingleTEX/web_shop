@@ -1,9 +1,17 @@
-header {
+html, body {
+  justify-content: center; /* Horizontally center */
+  align-items: center;
     overflow: hidden;
-    position: absolute;
+}
+
+header {
+    position:relative;
     width: 100%;
+    margin: 0;
+    top: 0;
     height: auto;
     color: white;
+    
 
 }
 
@@ -25,9 +33,10 @@ header .right {
 
 
     .burger-menu {
-        display: block;
+        display: none;
     }
-
+    
+   
     .navbar a {
         display: inline-block;
         text-align: center;
@@ -52,11 +61,14 @@ header .right {
     }
 }
 
-
 @media screen and (max-width=509px) {
-    .navbar a {
+    .navbar a{
         display: none;
     }
+}
+
+
+@media screen and (max-width=509px) {
 
     .burger-menu div {
         height: 4px;
@@ -90,6 +102,10 @@ header .right {
     .burger-menu:hover div {
         width: 30px;
     }
+    
+}
+
+@media screen and (max-width=509px) {
 
     .dropdown-content {
         display: none;
@@ -100,17 +116,15 @@ header .right {
         background: linear-gradient(to right, #4c5c3f, #4e6668);
         border-radius: 10px;
         width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
         z-index: 9999;
     }
 
     .dropdown {
-        color: black;
         padding: 12px 16px;
         text-decoration: none;
         background: linear-gradient(to right, #314d5e, #476354, #455961);
         display: block;
-        color: white;
         text-align: left;
         float: left;
         margin: 5px;
@@ -119,10 +133,6 @@ header .right {
 
     .burger-menu:hover,
     .burger-menu:hover .dropdown-content {
-        display: block;
-    }
-
-    .dropdown-content .show {
         display: block;
     }
 }
@@ -134,7 +144,7 @@ footer {
     bottom: 0;
     margin: 0;
     overflow: hidden;
-    border-radius: 0px 0px 10px 10px;
+    border-radius: 0 0 10px 10px;
     height: auto;
     width: 80%;
 
