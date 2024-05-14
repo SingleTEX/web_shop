@@ -14,14 +14,14 @@
 <body>
     <div class="container-grid">
         <div class="container">
-            
-    <header>
 
-    </header>
+            <header>
+
+            </header>
             <main>
                 <div class="singlog">
                     <button type="button" class="active" id="loginBtn">Log in</button>
-                    l<button type="button" class="active" id="signupBtn">Sign in</button>
+                    <button type="button" class="active" id="signupBtn">Sign in</button>
                 </div>
                 <div id="signupForm" style=display:none;>
                     <label for="firstname">First Name</label>
@@ -42,11 +42,11 @@
                     <button type="submit">Sign up</button>
 
                     <div class="cnp">
-                        <button type="button" class="cancelbtn" href="index.html">Cancel</button>
+                        <button type="button" class="cancelBtn" onclick="window.location.href='index.html'">Cancel</button>
                     </div>
                 </div>
 
-                <div id="loginForm" style="display: none;">
+                <div id="loginForm" style="display: block;">
                     <label for="username">Username</label>
                     <input type="text" placeholder="Enter username" name="username" required>
 
@@ -61,42 +61,92 @@
 
                 </div>
             </main>
-        
-        <div class="bg"></div>
 
-        <footer>
+            <div class="bg"></div>
 
-        </footer>
+            <footer>
 
-    
-    
-    </div>
+            </footer>
+
+
+
         </div>
+    </div>
     <script src="js/script.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            // Get references to the buttons and forms
-            const loginBtn = document.getElementById('loginBtn');
-            const signupBtn = document.getElementById('signupBtn');
-            const signupForm = document.getElementById('signupForm');
-            const loginForm = document.getElementById('loginForm');
+    <script src="js/singlig.js"></script>
+    <script src="database/dbcon.js"></script>
+<script>
+    const express = require('express');
+const sql = require('mssql');
+const app = express();
+const port = 3000;
 
-            // Add click event listeners to the buttons
-            loginBtn.addEventListener('click', function() {
-                // Hide sign up form
-                signupForm.style.display = 'none';
-                // Show login form
-                loginForm.style.display = 'block';
-            });
+// Middleware to parse JSON bodies
+app.use(express.json());
 
-            signupBtn.addEventListener('click', function() {
-                // Hide login form
-                loginForm.style.display = 'none';
-                // Show sign up form
-                signupForm.style.display = 'block';
-            });
+// Configuration object for connecting to the database
+const config = {
+    user: 'YourUsername',
+    password: 'YourPassword',
+    server: 'localhost\\SQLEXPRESS',
+    database: 'oktika',
+    options: {
+        encrypt: true, // For Azure SQL, you need to enable encryption
+        trustServerCertificate: true // For Azure SQL, you need to trust the server certificate
+    }
+};
+
+// Function to connect to the database
+async function connectToDB() {
+    try {
+        await sql.connect(config);
+        console.log('Connected to the database');
+    } catch (err) {
+        console.error('Error connecting to the database:', err);
+    }
+}
+
+// Call the connectToDB function to establish the connection
+connectToDB();
+
+// Endpoint to handle user registration
+app.post('/signup', async (req, res) => {
+    try {
+        // Extract user data from the request body
+        const { firstname, lastname, username, email, password } = req.body;
+
+        // SQL query to insert user data into the database
+        const query = `
+            INSERT INTO Users (FirstName, LastName, Username, Email, Password)
+            VALUES (@FirstName, @LastName, @Username, @Email, @Password)
+        `;
+
+        // Execute the query
+        await sql.query(query, {
+            FirstName: firstname,
+            LastName: lastname,
+            Username: username,
+            Email: email,
+            Password: password
         });
-        </script>
+
+        // Send a success response
+        res.status(200).send('User registered successfully.');
+    } catch (error) {
+        // Handle errors
+        console.error('Error:', error);
+        res.status(500).send('Error registering user.');
+    }
+});
+
+// Start the server
+app.listen(port, () => {
+    console.log(`Server listening at http://localhost:${port}`);
+});
+
+
+
+</script>
 </body>
 
 </html>

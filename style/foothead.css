@@ -1,23 +1,14 @@
-html, body {
-  justify-content: center; /* Horizontally center */
-  align-items: center;
-    overflow: hidden;
-}
-
 header {
     position:relative;
+    overflow: hidden;
     width: 100%;
-    margin: 0;
-    top: 0;
-    height: auto;
-    color: white;
-    
-
+    background-color: #333; /* Example color */
+    z-index: 1000; /* Ensure the header stays above other content */
 }
-
 header h1 {
     text-align: center;
     font-size: 24pt;
+    color: white;
 }
 
 header .right {
@@ -141,25 +132,25 @@ header .right {
 
 footer {
     position: fixed;
-    bottom: 0;
-    margin: 0;
-    overflow: hidden;
-    border-radius: 0 0 10px 10px;
-    height: auto;
+    bottom:0;
     width: 80%;
+    background-color: #333; /* Example color */
+    color: white; /* Example color */
+    text-align: center;
+    padding: 10px 0;
+    z-index: 999; 
 
-    color: white;
 }
 
 footer h2 {
     text-align: center;
-    margin: 10px;
+    margin: 5px;
     padding: 5px;
 }
 
 footer p {
     text-align: left;
     font-size: 8pt;
-    margin: 10px;
+    margin: 5px;
     color: grey;
 }

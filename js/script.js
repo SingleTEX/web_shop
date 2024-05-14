@@ -5,7 +5,7 @@ const footer = document.querySelector("footer");
 header.innerHTML = `
     <h1>Oktika</h1>
     <div class="navbar">
-        <a href="index.html" class="active">Store</a>
+        <a href="index.html">Store</a>
         <a href="cart.html">Cart</a>
         <a href="profile.html">Profile</a>
         <a href="sign_up.html" class="right">Log in</a>
@@ -14,7 +14,7 @@ header.innerHTML = `
             <div class="two"></div>
             <div class="three"></div>
             <nav class="dropdown-content">
-        <a href="index.html" class="active">Store</a>
+        <a href="index.html">Store</a>
         <a href="cart.html">Cart</a>
         <a href="profile.html">Profile</a>
         <a href="sign_up.html" class="right">Log in</a>
