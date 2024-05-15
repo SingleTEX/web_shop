@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="style/gradiant-static.css">
   <link rel="stylesheet" href="style/cart.css">
   <link rel="stylesheet" href="style/grid.css">
+
 </head>
 
 <body>
@@ -20,7 +21,7 @@
 
     </header>
 
-    <main>
+    <main id="main-section">
       <div class="shopping-cart">
 
         <div class="column-labels">
@@ -78,6 +79,7 @@
         </div>
 
         <div class="totals">
+
           <div class="alert2">
             <strong>Warning!</strong> "In the quantity field, you have the option to purchase multiple game keys. Upon
             completing the purchase, you will receive a corresponding number of game keys, which varies depending on
@@ -86,28 +88,29 @@
           </div>
 
 
+
           <div class="totals-item">
             <label>Subtotal</label>
-            <div class="totals-value" id="cart-subtotal">71.97</div>
+            <div class="totals-value" id="cart-subtotal"></div>
           </div>
           <div class="totals-item">
             <label>Tax (5%)</label>
-            <div class="totals-value" id="cart-tax">3.60</div>
+            <div class="totals-value" id="cart-tax"></div>
           </div>
           <div class="totals-item totals-item-total">
             <label>Grand Total</label>
-            <div class="totals-value" id="cart-total">90.57</div>
+            <div class="totals-value" id="cart-total"></div>
           </div>
+
+
         </div>
 
+        <button class="checkout" onclick="showPayment()">Checkout</button>
       </div>
-
-      <button class="checkout" onclick="showPayment()">Checkout</button>
-
   </div>
 
   <div class="payment" id="paymentSection">
-    <div class="chose-card">
+    <div class="chose-card" id="card-select">
       <label for="cards">Payment method</label>
 
       <select name="cards" id="payment-method">
@@ -206,7 +209,8 @@
           </select>
 
 
-          <input type="submit" value="Continue">
+          <button class="button" id="mastercardPayButton">Pay</button>
+
 
           <div class="alert">
             <strong>info!</strong> "This website is currently in the beta testing phase and is optimized for use
@@ -308,7 +312,8 @@
           </select>
 
 
-          <input type="submit" value="Continue">
+          <button class="button" id="visaPayButton">Pay</button>
+
 
           <div class="alert">
             <strong>info!</strong> "This website is currently in the beta testing phase and is optimized for use
@@ -350,7 +355,8 @@
           </select>
 
 
-          <input type="submit" value="Continue">
+          <button class="button" id="paysafecardPayButton">Pay</button>
+
 
           <div class="alert">
             <strong>info!</strong> "This website is currently in the beta testing phase and is optimized for use
@@ -362,41 +368,79 @@
         </div>
 
       </div>
-
-      <div class="payment-sucsesful" id="payment-sucsesful">
-        <div class="success-alert">
-          <strong>Payment Successful!</strong> "Your payment has been processed successfully. You can now access your
-          library by clicking the button below."
-        </div>
-
-        <button id="libraryButton" class="library">Library</button>
-      </div>
-      <div class="payment-non-sucsesful" id="payment-non-sucsesful">
-        <div class="non-success-alert">
-          <strong>Payment Non Successful!</strong> "We apologize, but it seems there was an issue processing your
-          payment. Please click the button below to return to the payment page and try again."
-        </div>
-        <button class="payment" onclick="showPayment()">Back</button>
-      </div>
-
     </div>
+
+
+    <div id="confirmation-page" class="page hidden">
+      <div class="header">
+        <h1>Order Confirmation</h1>
+        <p>Thank you for your purchase!</p>
+      </div>
+
+      <div class="order-summary">
+        <h2>Order Summary</h2>
+        <div class="order-item">
+          <div class="order-item-image">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/en/thumb/0/0c/Witcher_3_cover_art.jpg/220px-Witcher_3_cover_art.jpg"
+              alt="The Witcher 3">
+          </div>
+          <div class="order-item-details">
+            <div class="product-title">The Witcher® 3: Wild Hunt</div>
+            <p class="product-description">You are Geralt of Rivia, mercenary monster slayer. Before you stands a
+              war-torn, monster-infested continent you can explore at will. Your current contract? Tracking down Ciri
+              — the Child of Prophecy, a living weapon that can alter the shape of the world.</p>
+          </div>
+          <div class="product-price">29.99</div>
+          <div class="product-quantity">Quantity: 1</div>
+          <div class="product-line-price">29.99</div>
+        </div>
+
+        <div class="order-item">
+          <div class="order-item-image">
+            <img src="https://upload.wikimedia.org/wikipedia/en/c/c8/Assetto_Corsa_cover.png" alt="Assetto Corsa">
+          </div>
+          <div class="order-item-details">
+            <div class="product-title">Assetto Corsa</div>
+            <p class="product-description">Assetto Corsa v1.16 introduces the new "Laguna Seca" laser-scanned track, 7
+              new cars among which the eagerly awaited Alfa Romeo Giulia Quadrifoglio! Check the changelog for further
+              info!</p>
+          </div>
+          <div class="product-price">19.99</div>
+          <div class="product-quantity">Quantity: 1</div>
+          <div class="product-line-price">19.99</div>
+        </div>
+      </div>
+
+      <div class="totals">
+        <div class="totals-item">
+          <label>Subtotal</label>
+          <div class="totals-value" id="cart-subtotal">49.98</div>
+        </div>
+        <div class="totals-item">
+          <label>Tax (5%)</label>
+          <div class="totals-value" id="cart-tax">2.50</div>
+        </div>
+        <div class="totals-item totals-item-total">
+          <label>Grand Total</label>
+          <div class="totals-value" id="cart-total">52.48</div>
+        </div>
+      </div>
+
+      <div class="order-completed-message">
+        <p>Your order has been successfully placed and you will receive an email confirmation shortly.</p>
+        <button class="button" onclick="window.location.href='index.html'">Return to Home</button>
+      </div>
+    </div>
+    </main>
+    <div class="bg"></div>
+    <footer></footer>
+
+
   </div>
-  </div>
-  </main>
-  <div class="bg"></div>
-
-
-  <footer>
-
-  </footer>
-
-
   <script src="js/script.js"></script>
   <script src="js/cart.js"></script>
   <script src="js/payment.js"></script>
-
-
-  </div>
 </body>
 
 </html>

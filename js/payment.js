@@ -32,4 +32,14 @@ document.addEventListener('DOMContentLoaded', function() {
             paysafecardSection.style.display = 'none';
         }
     });
+
 });
+function showConfirmationPage() {
+    document.getElementById('card-select').classList.add('hidden');
+    document.getElementById('confirmation-page').classList.remove('hidden');
+  }
+  
+  document.getElementById('mastercardPayButton').addEventListener('click', showConfirmationPage);
+  document.getElementById('visaPayButton').addEventListener('click', showConfirmationPage);
+  document.getElementById('paysafecardPayButton').addEventListener('click', showConfirmationPage);
+  
