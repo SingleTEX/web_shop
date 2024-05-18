@@ -1,49 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
-    <link rel="stylesheet" href="Style/grid.css">
-    <style>
-        
+    <title>Oktika</title>
+    <link rel="stylesheet" href="style/grid.css">
+    <link rel="stylesheet" href="style/foothead.css">
+    <link rel="stylesheet" href="style/gradiant-static.css">
 
+    <style>
         img {
             height: 150px;
             width: 150px;
             background: #dfdfdf;
         }
     </style>
+
 </head>
 
-
 <body>
-    <header>
+    <div class="container-grid">
 
-    </header>
+        <header>
 
-    <main>
-        <div class="esentials">
-            <img src="img.png">
-            <input type="file">
+        </header>
 
-            <h2>Name</h2>
+        <main>
+            <div class="esentials">
+                <img src="img.png">
+                <input type="file">
+    
+                <h2>Name</h2>
+    
+    
+    
+                <a href="sign_up.html">sign up</a>
+            </div>
+    
+            <div class="account">
+    
+            </div>
+        </main>
+        <div class="bg"></div>
 
 
+        <footer>
 
-            <a href="sign_up.html">sign up</a>
-        </div>
+        </footer>
 
-        <div class="account">
-
-        </div>
-    </main>
-
-    <footer>
-
-    </footer>
-
+    </div>
+    <script src="js/script.js"></script>
     <script>
         const image = document.querySelector("img"),
             input = document.querySelector("input");
@@ -52,6 +58,7 @@
             image.src = URL.createObjectURL(input.files[0]);
         });
     </script>
+
 </body>
 
 </html>

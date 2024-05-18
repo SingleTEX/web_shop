@@ -35,7 +35,6 @@
   display: relative;
 }
 
-
 /* Body/Header stuff */
 h1 {
   font-weight: 100;
@@ -47,13 +46,16 @@ label {
 
 .shopping-cart {
   background-color: white;
-  margin-top: 20px;
-  padding: 20px;
-
+  margin-top: 0; /* Remove any margin at the top */
+  padding: 0 20px 20px; /* Adjust padding to remove gap at the top */
+  border-top: 0; /* Ensure no top border is adding space */
 }
 
 /* Column headers */
 .column-labels label {
+  padding-top: 0; /* Remove padding at the top */
+  margin-top: 0; /* Remove margin at the top */
+  border-top: 0; /* Ensure no top border is adding space */
   padding-bottom: 15px;
   margin-bottom: 15px;
   border-bottom: 1px solid var(--color-border);
@@ -114,18 +116,6 @@ label {
   align-items: flex-start;
   margin-top: 20px;
 }
-
-.alert2 {
-  padding: 20px;
-  margin-left: 10px;
-  margin-right: 10px;
-  background-color: lightyellow;
-  color: black;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 1.4em;
-}
-
 
 .totals-item {
   display: flex;
@@ -310,8 +300,6 @@ label {
   display: none;
 }
 
-
-
 .hidden {
   display: none;
 }
@@ -352,21 +340,6 @@ label {
 .order-item-details {
   flex: 1;
   margin-left: 20px;
-}
-
-.totals-item {
-  display: flex;
-  justify-content: space-between;
-  padding: 5px 0;
-}
-
-.totals-item label {
-  color: #666;
-}
-
-.totals-item-total label {
-  font-weight: bold;
-  color: #333;
 }
 
 .order-completed-message {
@@ -412,7 +385,6 @@ label {
   color: #333;
 }
 
-.order-summary,
 .payment-form {
   margin-top: 30px;
 }
