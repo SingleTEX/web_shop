@@ -26,16 +26,13 @@
         </header>
 
         <main>
-            <div class="esentials">
-                <img src="img.png">
-                <input type="file">
-    
-                <h2>Name</h2>
-    
-    
-    
-                <a href="sign_up.html">sign up</a>
-            </div>
+            <form id="uploadForm" enctype="multipart/form-data">
+                <input type="file" id="profilePicture" name="profilePicture" accept="image/*" required>
+                <button type="submit">Upload</button>
+            </form>
+            <img id="imagePreview" src="" alt="Image Preview" style="display: none; max-width: 200px;"/>
+            <p id="statusMessage"></p>
+
     
             <div class="account">
     
@@ -49,16 +46,7 @@
         </footer>
 
     </div>
-    <script src="js/script.js"></script>
-    <script>
-        const image = document.querySelector("img"),
-            input = document.querySelector("input");
-
-        input.addEventListener("change", () => {
-            image.src = URL.createObjectURL(input.files[0]);
-        });
-    </script>
-
+    <script src="js/script.js"></script>    
 </body>
 
 </html>
