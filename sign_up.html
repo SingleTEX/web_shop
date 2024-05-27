@@ -48,18 +48,18 @@
 
                 <div id="loginForm" style="display: block;">
                     <label for="username">Username</label>
-                    <input type="text" placeholder="Enter username" name="username" required>
-
+                    <input type="text" placeholder="Enter username or email" name="username" id="username" required/>
+                
                     <label for="psw">Password</label>
-                    <input type="password" placeholder="Enter password" name="psw" required>
-
+                    <input type="password" placeholder="Enter password" name="psw" id="psw" required/>
+                
                     <div class="cnp">
-                        <!-- ask the database for log in info -->
-                        <button type="submit" class="logBtn" href="index.html">Log in</button>
+                        <button type="submit" class="logBtn" id="loginButton">Log in</button>
                         <span class="psw">Forgot <a href="#">password?</a></span>
                     </div>
-
                 </div>
+                <div id="response"></div>
+                
             </main>
 
             <div class="bg"></div>

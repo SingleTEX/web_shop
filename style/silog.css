@@ -59,6 +59,25 @@ button {
     display: inline-block;
 }
 
+.cnp input {
+    background-color: transparent;
+    color: white;
+    border: outset;
+    border-color: #f44336;
+    border-radius: 10px;
+    margin: 8px;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    display: inline-block;
+}
+
+.cnp input:hover {
+    opacity: 0.8;
+    background-color:purple;
+    color: black;
+}
+
 /* Add a hover effect for buttons */
 button:hover {
     opacity: 0.8;

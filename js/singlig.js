@@ -4,7 +4,12 @@ document.addEventListener("DOMContentLoaded", function() {
     const signupBtn = document.getElementById('signupBtn');
     const signupForm = document.getElementById('signupForm');
     const loginForm = document.getElementById('loginForm');
-    const cancelBtn = document.getElementById('cancelBtn');
+    const cancelBtns = document.querySelectorAll('.cancelBtn'); // Assume cancelBtn has class 'cancelBtn'
+
+    // Function to go to the index page
+    function goToIndexPage() {
+        window.location.href = 'index.html';
+    }
 
     // Add click event listeners to the buttons
     loginBtn.addEventListener('click', function() {
@@ -21,9 +26,12 @@ document.addEventListener("DOMContentLoaded", function() {
         signupForm.style.display = 'block';
     });
 
-    cancelBtn.forEach(function(cancelBtn) {
-        cancelBtn.addEventListener('click', goToIndexPage);
-    });
-
+    // Add click event listeners to each cancel button
+    if (cancelBtns.length > 0) {
+        cancelBtns.forEach(function(cancelBtn) {
+            cancelBtn.addEventListener('click', goToIndexPage);
+        });
+    } else {
+        console.error('No elements with class "cancelBtn" found.');
+    }
 });
-
