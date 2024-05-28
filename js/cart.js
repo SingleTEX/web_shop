@@ -58,13 +58,17 @@ document.addEventListener('DOMContentLoaded', function() {
   shoppingCart.style.display = "none";
   }
 
-  document.addEventListener('DOMContentLoaded', function() {
-    // Get the library button element
-    var libraryButton = document.getElementById('libraryButton');
-
     // Add event listener to the library button
-    libraryButton.addEventListener('click', function() {
-        // Redirect to the library file
-        window.location.href = 'library.html';
-    });
-});
+    document.addEventListener('DOMContentLoaded', function() {
+      const libraryButton = document.getElementById('libraryButton');
+      
+      if (libraryButton) {
+          libraryButton.addEventListener('click', function() {
+              // Redirect to the library file
+              window.location.href = 'library.html';
+          });
+      } else {
+          console.error('Element with ID "libraryButton" not found.');
+      }
+  });
+  
