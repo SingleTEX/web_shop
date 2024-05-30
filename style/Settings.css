@@ -1,0 +1,116 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.back-link {
+    text-decoration: none;
+    color: #337ab7;
+}
+
+.back-link:hover {
+    color: #23527c;
+}
+
+.settings-container {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.general, .profile {
+    flex-basis: 60%;
+    padding: 20px;
+    border-left: 2px solid black;
+    position: relative;
+    display: none;
+}
+
+.general.active, .profile.active {
+    display: block;
+}
+
+.general h2, .profile h2 {
+    margin-top: 0;
+}
+
+.general form, .profile form {
+    display: flex;
+    flex-direction: column;
+}
+
+.general label, .profile label {
+    margin-bottom: 10px;
+}
+
+.general input[type="text"], .profile input[type="text"] {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+}
+
+.general select, .profile select {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+}
+
+.other-settings {
+    padding: 20px;
+    display: grid;
+    position: fixed;
+}
+
+.other-settings button {
+    background-color: #333;
+    border-radius: 0 40px;
+    border: none;
+    margin: 5px;
+    color: white;
+    height: fit-content;
+}
+
+.other-settings button:hover {
+    background-color: rgba(230, 273, 173, 0.6);
+    border-radius: 0 40px;
+    margin: 5px;
+    color: black;
+    border: none;
+    height: fit-content;
+}
+
+.other-settings h2 {
+    margin-top: 20px;
+}
+
+/* Column container */
+.settings-container {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+}
+
+/* Sidebar/left column */
+.other-settings {
+    flex: 15%;
+    padding: 5px;
+    color: white;
+    border-right: 2px solid white;
+}
+
+/* Main column */
+.contain {
+    display: inline-flex;
+    flex: 80%;
+    padding: 20px;
+}

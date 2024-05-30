@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style/grid.css">
     <link rel="stylesheet" href="style/foothead.css">
     <link rel="stylesheet" href="style/gradiant-static.css">
+    <link rel="stylesheet" href="style/Settings.css">
 
 </head>
 
@@ -19,10 +20,43 @@
         </header>
 
         <main>
+            <div class="container">
 
-            <div class="general">
-                <div class="name"></div>
-                <div class="picture"></div>
+                <h1>SingleTEX</h1>
+                <a href="profile.html" class="back-link">Back to Your Profile</a>
+                <div class="settings-container">
+                    <div class="other-settings">
+                        <button id="generalButton">
+                            <h2>General</h2>
+                        </button>
+                        <button id="profileButton">
+                            <h2>Profile</h2>
+                        </button>
+                    </div>
+                    <div class="contain">
+                        <div class="general active" id="generalForm">
+                            <h2>General</h2>
+                            <form>
+                                <label for="profile-name">PROFILE NAME</label>
+                                <input type="text" id="profile-name" value="SingleTEX">
+                            </form>
+                        </div>
+                        <div class="profile" id="profileForm">
+                            <h2>Profile</h2>
+                            <form>
+                                <label for="real-name">REAL NAME</label>
+                                <input type="text" id="real-name" value="Andrei">
+                                <label for="custom-url">CUSTOM URL</label>
+                                <input type="text" id="custom-url" value="SingleIRE">
+                                <label for="location">LOCATION</label>
+                                <select id="location">
+                                    <option value="Denmark" selected>Denmark</option>
+                                    <!-- Add more options here -->
+                                </select>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
 
         </main>
@@ -35,6 +69,7 @@
 
     </div>
     <script src="js/script.js"></script>
+    <script src="js/settings.js"></script>
 </body>
 
 </html>

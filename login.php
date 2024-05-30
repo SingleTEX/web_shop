@@ -1,5 +1,5 @@
 <?php
-header('Content-Type: application/json');
+
 
 $servername = "localhost";
 $username = "ban01_skp-dp_sde_dk";
@@ -31,12 +31,15 @@ if ($stmt->num_rows > 0) {
     $stmt->bind_result($id, $db_password);
     $stmt->fetch();
     
-    if (password_verify($password, $db_password)) {
+    if (password_verify($password, $db_password)) { 
+        header('Content-Type: application/json');
         echo json_encode(["message" => "Login successful"]);
     } else {
+        header('Content-Type: application/json');
         echo json_encode(["message" => "Invalid username or password"]);
     }
 } else {
+    header('Content-Type: application/json');
     echo json_encode(["message" => "Invalid username or password"]);
 }
 

@@ -5,8 +5,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Oktika</title>
-
-  <link rel="stylesheet" href="style/Style.css">
   <link rel="stylesheet" href="style/foothead.css">
   <link rel="stylesheet" href="style/gradiant-static.css">
   <link rel="stylesheet" href="style/cart.css">
@@ -107,336 +105,343 @@
 
         <button class="checkout" onclick="showPayment()">Checkout</button>
       </div>
-  </div>
 
-  <div class="payment" id="paymentSection">
-    <div class="chose-card" id="card-select">
-      <label for="cards">Payment method</label>
 
-      <select name="cards" id="payment-method">
-        <option value="--">--</option>
-        <option value="mastercard">MasterCard</option>
-        <option value="visa">Visa</option>
-        <option value="paysafecard">PaySafeCard</option>
-      </select>
+      <div class="payment" id="paymentSection">
+        <div class="chose-card" id="card-select">
+          <label for="cards">Payment method</label>
 
-      <div class="mastercard-section" id="mastercard-section">
-
-        <label for="card-number">Card Number</label>
-        <input type="number" required>
-
-        <label for="expiering-date">Expiering date</label>
-
-        <select name="expiering-date-mounth" required>
-          <option value="--">--</option>
-          <option value="01">01</option>
-          <option value="02">02</option>
-          <option value="03">03</option>
-          <option value="04">04</option>
-          <option value="05">05</option>
-          <option value="06">06</option>
-          <option value="07">07</option>
-          <option value="08">08</option>
-          <option value="09">09</option>
-          <option value="10">10</option>
-          <option value="11">11</option>
-          <option value="12">12</option>
-        </select>
-
-        <select name="expiering-date-day" required>
-          <option value="--">--</option>
-          <option value="01">01</option>
-          <option value="02">02</option>
-          <option value="03">03</option>
-          <option value="04">04</option>
-          <option value="05">05</option>
-          <option value="06">06</option>
-          <option value="07">07</option>
-          <option value="08">08</option>
-          <option value="09">09</option>
-          <option value="10">10</option>
-          <option value="11">11</option>
-          <option value="12">12</option>
-          <option value="13">13</option>
-          <option value="14">14</option>
-          <option value="15">15</option>
-          <option value="16">16</option>
-          <option value="17">17</option>
-          <option value="18">18</option>
-          <option value="19">19</option>
-          <option value="20">20</option>
-          <option value="21">21</option>
-          <option value="22">22</option>
-          <option value="23">23</option>
-          <option value="24">24</option>
-          <option value="25">25</option>
-          <option value="26">26</option>
-          <option value="27">27</option>
-          <option value="28">28</option>
-          <option value="29">29</option>
-          <option value="30">30</option>
-          <option value="31">31</option>
-        </select>
-
-        <label for="security-code">Security code</label>
-        <input type="number" id="card-number" name="card-number" maxlength="16" required>
-
-        <div class="billing-info">
-
-          <label for="fname">First name:</label>
-          <input type="text" id="fname" name="fname">
-
-          <label for="lname">Last name:</label>
-          <input type="text" id="lname" name="lname">
-
-          <label for="address">Billing address:</label>
-          <input type="text" id="address" name="address">
-
-          <label for="address2">Billing address, line 2:</label>
-          <input type="text" id="address2" name="address2">
-
-          <label for="city">City:</label>
-          <input type="text" id="city" name="city">
-
-          <label for="zip">Zip or postal code:</label>
-          <input type="text" id="zip" name="zip">
-
-          <label for="country">Country:</label>
-          <select id="country" name="country">
-            <option value="">Select a country</option>
-            <option value="Denmark">Denmark</option>
-            <!-- Add more options as needed -->
+          <select name="cards" id="payment-method">
+            <option value="--">--</option>
+            <option value="mastercard">MasterCard</option>
+            <option value="visa">Visa</option>
+            <option value="paysafecard">PaySafeCard</option>
           </select>
 
+          <div class="mastercard-section" id="mastercard-section">
 
-          <button class="button" id="mastercardPayButton">Pay</button>
+            <label for="card-number">Card Number</label>
+            <input type="number" required>
+
+            <label for="expiering-date">Expiering date</label>
+
+            <select name="expiering-date-mounth" required>
+              <option value="--">--</option>
+              <option value="01">01</option>
+              <option value="02">02</option>
+              <option value="03">03</option>
+              <option value="04">04</option>
+              <option value="05">05</option>
+              <option value="06">06</option>
+              <option value="07">07</option>
+              <option value="08">08</option>
+              <option value="09">09</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+            </select>
+
+            <select name="expiering-date-day" required>
+              <option value="--">--</option>
+              <option value="01">01</option>
+              <option value="02">02</option>
+              <option value="03">03</option>
+              <option value="04">04</option>
+              <option value="05">05</option>
+              <option value="06">06</option>
+              <option value="07">07</option>
+              <option value="08">08</option>
+              <option value="09">09</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23">23</option>
+              <option value="24">24</option>
+              <option value="25">25</option>
+              <option value="26">26</option>
+              <option value="27">27</option>
+              <option value="28">28</option>
+              <option value="29">29</option>
+              <option value="30">30</option>
+              <option value="31">31</option>
+            </select>
+
+            <label for="security-code">Security code</label>
+            <input type="number" id="card-number" name="card-number" maxlength="16" required>
+
+            <div class="billing-info">
+
+              <label for="fname">First name:</label>
+              <input type="text" id="fname" name="fname">
+
+              <label for="lname">Last name:</label>
+              <input type="text" id="lname" name="lname">
+
+              <label for="address">Billing address:</label>
+              <input type="text" id="address" name="address">
+
+              <label for="address2">Billing address, line 2:</label>
+              <input type="text" id="address2" name="address2">
+
+              <label for="city">City:</label>
+              <input type="text" id="city" name="city">
+
+              <label for="zip">Zip or postal code:</label>
+              <input type="text" id="zip" name="zip">
+
+              <label for="country">Country:</label>
+              <select id="country" name="country">
+                <option value="">Select a country</option>
+                <option value="Denmark">Denmark</option>
+                <!-- Add more options as needed -->
+              </select>
 
 
-          <div class="alert">
-            <strong>info!</strong> "This website is currently in the beta testing phase and is optimized for use
-            within Denmark. While functional elements are available, some features may not operate seamlessly
-            outside
-            of Denmark due to ongoing development and localization efforts. We appreciate your understanding and
-            patience as we work to enhance the platform for a broader audience"
+              <button class="button" id="mastercardPayButton">Pay</button>
+
+
+              <div class="alert">
+                <strong>info!</strong> "This website is currently in the beta testing phase and is optimized for use
+                within Denmark. While functional elements are available, some features may not operate seamlessly
+                outside
+                of Denmark due to ongoing development and localization efforts. We appreciate your understanding and
+                patience as we work to enhance the platform for a broader audience"
+              </div>
+
+            </div>
+
           </div>
 
+          <div class="visa-section" id="visa-section">
+            <label for="card-number">Card Number</label>
+            <input type="number" required>
+
+            <label for="expiering-date">Expiering date</label>
+
+            <select name="expiering-date-mounth" required>
+              <option value="--">--</option>
+              <option value="01">01</option>
+              <option value="02">02</option>
+              <option value="03">03</option>
+              <option value="04">04</option>
+              <option value="05">05</option>
+              <option value="06">06</option>
+              <option value="07">07</option>
+              <option value="08">08</option>
+              <option value="09">09</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+            </select>
+
+            <select name="expiering-date-day" required>
+              <option value="--">--</option>
+              <option value="01">01</option>
+              <option value="02">02</option>
+              <option value="03">03</option>
+              <option value="04">04</option>
+              <option value="05">05</option>
+              <option value="06">06</option>
+              <option value="07">07</option>
+              <option value="08">08</option>
+              <option value="09">09</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23">23</option>
+              <option value="24">24</option>
+              <option value="25">25</option>
+              <option value="26">26</option>
+              <option value="27">27</option>
+              <option value="28">28</option>
+              <option value="29">29</option>
+              <option value="30">30</option>
+              <option value="31">31</option>
+            </select>
+
+            <label for="security-code">Security code</label>
+            <input type="number" id="card-number" name="card-number" maxlength="16" required>
+
+            <div class="billing-info">
+
+              <label for="fname">First name:</label>
+              <input type="text" id="fname" name="fname">
+
+              <label for="lname">Last name:</label>
+              <input type="text" id="lname" name="lname">
+
+              <label for="address">Billing address:</label>
+              <input type="text" id="address" name="address">
+
+              <label for="address2">Billing address, line 2:</label>
+              <input type="text" id="address2" name="address2">
+
+              <label for="city">City:</label>
+              <input type="text" id="city" name="city">
+
+              <label for="zip">Zip or postal code:</label>
+              <input type="text" id="zip" name="zip">
+
+              <label for="country">Country:</label>
+              <select id="country" name="country">
+                <option value="">Select a country</option>
+                <option value="Denmark">Denmark</option>
+                <!-- Add more options as needed -->
+              </select>
+
+
+              <button class="button" id="visaPayButton">Pay</button>
+
+
+              <div class="alert">
+                <strong>info!</strong> "This website is currently in the beta testing phase and is optimized for use
+                within Denmark. While functional elements are available, some features may not operate seamlessly
+                outside
+                of Denmark due to ongoing development and localization efforts. We appreciate your understanding and
+                patience as we work to enhance the platform for a broader audience"
+              </div>
+            </div>
+          </div>
+
+          <div class="paysafecard-section" id="paysafecard-section">
+
+            <div class="billing-info">
+
+              <label for="fname">First name:</label>
+              <input type="text" id="fname" name="fname">
+
+              <label for="lname">Last name:</label>
+              <input type="text" id="lname" name="lname">
+
+              <label for="address">Billing address:</label>
+              <input type="text" id="address" name="address">
+
+              <label for="address2">Billing address, line 2:</label>
+              <input type="text" id="address2" name="address2">
+
+              <label for="city">City:</label>
+              <input type="text" id="city" name="city">
+
+              <label for="zip">Zip or postal code:</label>
+              <input type="text" id="zip" name="zip">
+
+              <label for="country">Country:</label>
+              <select id="country" name="country">
+                <option value="">Select a country</option>
+                <option value="Denmark">Denmark</option>
+                <!-- Add more options as needed -->
+              </select>
+
+
+              <button class="button" id="paysafecardPayButton">Pay</button>
+
+
+              <div class="alert">
+                <strong>info!</strong> "This website is currently in the beta testing phase and is optimized for use
+                within Denmark. While functional elements are available, some features may not operate seamlessly
+                outside
+                of Denmark due to ongoing development and localization efforts. We appreciate your understanding and
+                patience as we work to enhance the platform for a broader audience"
+              </div>
+            </div>
+
+          </div>
         </div>
 
-      </div>
 
-      <div class="visa-section" id="visa-section">
-        <label for="card-number">Card Number</label>
-        <input type="number" required>
+        <div id="confirmation-page" class="page hidden">
+          <div class="header">
+            <h1>Order Confirmation</h1>
+            <p>Thank you for your purchase!</p>
+          </div>
 
-        <label for="expiering-date">Expiering date</label>
+          <div class="order-summary">
+            <h2>Order Summary</h2>
+            <div class="order-item">
+              <div class="order-item-image">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/en/thumb/0/0c/Witcher_3_cover_art.jpg/220px-Witcher_3_cover_art.jpg"
+                  alt="The Witcher 3">
+              </div>
+              <div class="order-item-details">
+                <div class="product-title">The Witcher® 3: Wild Hunt</div>
+                <p class="product-description">You are Geralt of Rivia, mercenary monster slayer. Before you stands a
+                  war-torn, monster-infested continent you can explore at will. Your current contract? Tracking down
+                  Ciri
+                  — the Child of Prophecy, a living weapon that can alter the shape of the world.</p>
+              </div>
+              <div class="product-price">29.99</div>
+              <div class="product-quantity">Quantity: 1</div>
+              <div class="product-line-price">29.99</div>
+            </div>
 
-        <select name="expiering-date-mounth" required>
-          <option value="--">--</option>
-          <option value="01">01</option>
-          <option value="02">02</option>
-          <option value="03">03</option>
-          <option value="04">04</option>
-          <option value="05">05</option>
-          <option value="06">06</option>
-          <option value="07">07</option>
-          <option value="08">08</option>
-          <option value="09">09</option>
-          <option value="10">10</option>
-          <option value="11">11</option>
-          <option value="12">12</option>
-        </select>
+            <div class="order-item">
+              <div class="order-item-image">
+                <img src="https://upload.wikimedia.org/wikipedia/en/c/c8/Assetto_Corsa_cover.png" alt="Assetto Corsa">
+              </div>
+              <div class="order-item-details">
+                <div class="product-title">Assetto Corsa</div>
+                <p class="product-description">Assetto Corsa v1.16 introduces the new "Laguna Seca" laser-scanned track,
+                  7
+                  new cars among which the eagerly awaited Alfa Romeo Giulia Quadrifoglio! Check the changelog for
+                  further
+                  info!</p>
+              </div>
+              <div class="product-price">19.99</div>
+              <div class="product-quantity">Quantity: 1</div>
+              <div class="product-line-price">19.99</div>
+            </div>
+          </div>
 
-        <select name="expiering-date-day" required>
-          <option value="--">--</option>
-          <option value="01">01</option>
-          <option value="02">02</option>
-          <option value="03">03</option>
-          <option value="04">04</option>
-          <option value="05">05</option>
-          <option value="06">06</option>
-          <option value="07">07</option>
-          <option value="08">08</option>
-          <option value="09">09</option>
-          <option value="10">10</option>
-          <option value="11">11</option>
-          <option value="12">12</option>
-          <option value="13">13</option>
-          <option value="14">14</option>
-          <option value="15">15</option>
-          <option value="16">16</option>
-          <option value="17">17</option>
-          <option value="18">18</option>
-          <option value="19">19</option>
-          <option value="20">20</option>
-          <option value="21">21</option>
-          <option value="22">22</option>
-          <option value="23">23</option>
-          <option value="24">24</option>
-          <option value="25">25</option>
-          <option value="26">26</option>
-          <option value="27">27</option>
-          <option value="28">28</option>
-          <option value="29">29</option>
-          <option value="30">30</option>
-          <option value="31">31</option>
-        </select>
+          <div class="totals">
+            <div class="totals-item">
+              <label>Subtotal</label>
+              <div class="totals-value" id="cart-subtotal">49.98</div>
+            </div>
+            <div class="totals-item">
+              <label>Tax (5%)</label>
+              <div class="totals-value" id="cart-tax">2.50</div>
+            </div>
+            <div class="totals-item totals-item-total">
+              <label>Grand Total</label>
+              <div class="totals-value" id="cart-total">52.48</div>
+            </div>
+          </div>
 
-        <label for="security-code">Security code</label>
-        <input type="number" id="card-number" name="card-number" maxlength="16" required>
-
-        <div class="billing-info">
-
-          <label for="fname">First name:</label>
-          <input type="text" id="fname" name="fname">
-
-          <label for="lname">Last name:</label>
-          <input type="text" id="lname" name="lname">
-
-          <label for="address">Billing address:</label>
-          <input type="text" id="address" name="address">
-
-          <label for="address2">Billing address, line 2:</label>
-          <input type="text" id="address2" name="address2">
-
-          <label for="city">City:</label>
-          <input type="text" id="city" name="city">
-
-          <label for="zip">Zip or postal code:</label>
-          <input type="text" id="zip" name="zip">
-
-          <label for="country">Country:</label>
-          <select id="country" name="country">
-            <option value="">Select a country</option>
-            <option value="Denmark">Denmark</option>
-            <!-- Add more options as needed -->
-          </select>
-
-
-          <button class="button" id="visaPayButton">Pay</button>
-
-
-          <div class="alert">
-            <strong>info!</strong> "This website is currently in the beta testing phase and is optimized for use
-            within Denmark. While functional elements are available, some features may not operate seamlessly
-            outside
-            of Denmark due to ongoing development and localization efforts. We appreciate your understanding and
-            patience as we work to enhance the platform for a broader audience"
+          <div class="order-completed-message">
+            <p>Your order has been successfully placed and you will receive an email confirmation shortly.</p>
+            <button class="button" onclick="window.location.href='index.html'">Return to Home</button>
           </div>
         </div>
       </div>
-
-      <div class="paysafecard-section" id="paysafecard-section">
-
-        <div class="billing-info">
-
-          <label for="fname">First name:</label>
-          <input type="text" id="fname" name="fname">
-
-          <label for="lname">Last name:</label>
-          <input type="text" id="lname" name="lname">
-
-          <label for="address">Billing address:</label>
-          <input type="text" id="address" name="address">
-
-          <label for="address2">Billing address, line 2:</label>
-          <input type="text" id="address2" name="address2">
-
-          <label for="city">City:</label>
-          <input type="text" id="city" name="city">
-
-          <label for="zip">Zip or postal code:</label>
-          <input type="text" id="zip" name="zip">
-
-          <label for="country">Country:</label>
-          <select id="country" name="country">
-            <option value="">Select a country</option>
-            <option value="Denmark">Denmark</option>
-            <!-- Add more options as needed -->
-          </select>
-
-
-          <button class="button" id="paysafecardPayButton">Pay</button>
-
-
-          <div class="alert">
-            <strong>info!</strong> "This website is currently in the beta testing phase and is optimized for use
-            within Denmark. While functional elements are available, some features may not operate seamlessly
-            outside
-            of Denmark due to ongoing development and localization efforts. We appreciate your understanding and
-            patience as we work to enhance the platform for a broader audience"
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-
-    <div id="confirmation-page" class="page hidden">
-      <div class="header">
-        <h1>Order Confirmation</h1>
-        <p>Thank you for your purchase!</p>
-      </div>
-
-      <div class="order-summary">
-        <h2>Order Summary</h2>
-        <div class="order-item">
-          <div class="order-item-image">
-            <img
-              src="https://upload.wikimedia.org/wikipedia/en/thumb/0/0c/Witcher_3_cover_art.jpg/220px-Witcher_3_cover_art.jpg"
-              alt="The Witcher 3">
-          </div>
-          <div class="order-item-details">
-            <div class="product-title">The Witcher® 3: Wild Hunt</div>
-            <p class="product-description">You are Geralt of Rivia, mercenary monster slayer. Before you stands a
-              war-torn, monster-infested continent you can explore at will. Your current contract? Tracking down Ciri
-              — the Child of Prophecy, a living weapon that can alter the shape of the world.</p>
-          </div>
-          <div class="product-price">29.99</div>
-          <div class="product-quantity">Quantity: 1</div>
-          <div class="product-line-price">29.99</div>
-        </div>
-
-        <div class="order-item">
-          <div class="order-item-image">
-            <img src="https://upload.wikimedia.org/wikipedia/en/c/c8/Assetto_Corsa_cover.png" alt="Assetto Corsa">
-          </div>
-          <div class="order-item-details">
-            <div class="product-title">Assetto Corsa</div>
-            <p class="product-description">Assetto Corsa v1.16 introduces the new "Laguna Seca" laser-scanned track, 7
-              new cars among which the eagerly awaited Alfa Romeo Giulia Quadrifoglio! Check the changelog for further
-              info!</p>
-          </div>
-          <div class="product-price">19.99</div>
-          <div class="product-quantity">Quantity: 1</div>
-          <div class="product-line-price">19.99</div>
-        </div>
-      </div>
-
-      <div class="totals">
-        <div class="totals-item">
-          <label>Subtotal</label>
-          <div class="totals-value" id="cart-subtotal">49.98</div>
-        </div>
-        <div class="totals-item">
-          <label>Tax (5%)</label>
-          <div class="totals-value" id="cart-tax">2.50</div>
-        </div>
-        <div class="totals-item totals-item-total">
-          <label>Grand Total</label>
-          <div class="totals-value" id="cart-total">52.48</div>
-        </div>
-      </div>
-
-      <div class="order-completed-message">
-        <p>Your order has been successfully placed and you will receive an email confirmation shortly.</p>
-        <button class="button" onclick="window.location.href='index.html'">Return to Home</button>
-      </div>
-    </div>
     </main>
+
+
+
     <div class="bg"></div>
-    <footer></footer>
+    <footer>
 
-
+    </footer>
   </div>
   <script src="js/script.js"></script>
   <script src="js/cart.js"></script>

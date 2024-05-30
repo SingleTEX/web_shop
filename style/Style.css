@@ -201,9 +201,9 @@ label {
 
 .product-image {
   display: flex;
-  justify-content: center; /* Center the image horizontally */
-  align-items: center; /* Center the image vertically */
-  height: 200px; /* Set a fixed height for centering */
+  justify-content: center; 
+  align-items: center; 
+  height: 200px; 
   margin-bottom: 10px;
 }
 
