@@ -1,11 +1,25 @@
-document.getElementById('witcherGame').addEventListener('click', function() {
-    window.location.href = 'game_info.html'; // Replace with the actual path to your game info file
+document.getElementById('witcherGame').addEventListener('click', function()
+{
+
+    window.location.href = 'game_info.html'; 
+});
+document.getElementById('fallout4').addEventListener('click', function()
+{
+
+    window.location.href = 'fallout.html'; 
+});
+document.getElementById('falloutnew').addEventListener('click', function()
+{
+
+    window.location.href = 'falloutnew.html'; 
+});
+document.getElementById('skyrim').addEventListener('click', function() {
+
+    window.location.href = 'skyrim.html'; 
 });
 
 const slides = document.querySelector('.slides');
 const images = document.querySelectorAll('.slides .screenshot');
-const prevButton = document.querySelector('.prev');
-const nextButton = document.querySelector('.next');
 let index = 0;
 
 function showSlide(i) {
@@ -18,5 +32,3 @@ function showSlide(i) {
     slides.style.transform = `translateX(${-index * 100}%)`;
 }
 
-prevButton.addEventListener('click', () => showSlide(-1));
-nextButton.addEventListener('click', () => showSlide(1));

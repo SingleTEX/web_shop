@@ -1,18 +1,16 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Function to calculate the total line price for a product
+
     function calculateLinePrice(product) {
       var quantity = product.querySelector('.product-quantity input').value;
       var price = parseFloat(product.querySelector('.product-price').textContent);
       return (quantity * price).toFixed(2);
     }
   
-    // Function to update the total line price for a product
     function updateLinePrice(product) {
       var linePrice = product.querySelector('.product-line-price');
       linePrice.textContent = calculateLinePrice(product);
     }
   
-    // Function to update the cart totals
     function updateCartTotals() {
       var products = document.querySelectorAll('.product');
       var subtotal = 0;
@@ -25,8 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
       document.getElementById('cart-tax').textContent = tax;
       document.getElementById('cart-total').textContent = total;
     }
-  
-    // Event listeners for quantity input changes
+
     var quantityInputs = document.querySelectorAll('.product-quantity input');
     quantityInputs.forEach(function(input) {
       input.addEventListener('input', function() {
@@ -36,7 +33,6 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
   
-    // Event listeners for remove buttons
     var removeButtons = document.querySelectorAll('.remove-product');
     removeButtons.forEach(function(button) {
       button.addEventListener('click', function() {
@@ -46,11 +42,9 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
   
-    // Initial update of cart totals
     updateCartTotals();
   });
   
-  // Function to show payment section
   function showPayment() {
     var paymentSection = document.getElementById("paymentSection");
   var shoppingCart = document.querySelector(".shopping-cart");
@@ -58,13 +52,12 @@ document.addEventListener('DOMContentLoaded', function() {
   shoppingCart.style.display = "none";
   }
 
-    // Add event listener to the library button
     document.addEventListener('DOMContentLoaded', function() {
       const libraryButton = document.getElementById('libraryButton');
       
       if (libraryButton) {
           libraryButton.addEventListener('click', function() {
-              // Redirect to the library file
+              
               window.location.href = 'library.html';
           });
       } else {
